@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabpfn"
+version = "0.0.0"
+description = "Local editable TabPFN with LoRA support by Steve"
+requires-python = ">=3.9"
+dependencies = [
+    "torch",
+    "numpy",
+    "scikit-learn"
+]
+
+[tool.setuptools]
+packages = ["tabpfn"]

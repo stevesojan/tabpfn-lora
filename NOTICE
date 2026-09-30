@@ -1,0 +1,14 @@
+tabpfn-lora
+Copyright 2026 Steve Sojan
+
+This project includes and modifies source code from TabPFN
+(https://github.com/PriorLabs/TabPFN), Copyright Prior Labs GmbH,
+licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Files modified to add LoRA (low-rank adaptation) on the attention QKV projections
+and LoRA-only fine-tuning:
+  - tabpfn/architectures/base/attention/full_attention.py
+  - tabpfn/architectures/base/config.py
+  - tabpfn/finetuning/finetuned_base.py
+  - tabpfn/finetuning/finetuned_classifier.py
+  - tabpfn/finetuning/finetuned_regressor.py

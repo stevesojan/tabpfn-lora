@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+tabpfn/tabpfn_checkpoints/
+tabpfn/*_split.csv
