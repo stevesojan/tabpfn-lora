@@ -5,13 +5,32 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tabpfn"
 version = "0.0.0"
-description = "Local editable TabPFN with LoRA support by Steve"
+description = "TabPFN with LoRA adapters on the attention QKV projections for parameter-efficient fine-tuning"
+readme = "README.md"
+license = { text = "Apache-2.0" }
 requires-python = ">=3.9"
 dependencies = [
     "torch",
     "numpy",
-    "scikit-learn"
+    "scipy",
+    "pandas",
+    "scikit-learn",
+    "einops",
+    "pydantic",
+    "pydantic-settings",
+    "huggingface_hub",
+    "joblib",
+    "networkx",
+    "packaging",
+    "tqdm",
+    "tabpfn-common-utils",
 ]
 
+[project.optional-dependencies]
+notebook = ["jupyter", "python-dotenv"]
+
 [tool.setuptools]
-packages = ["tabpfn"]
+packages = { find = { include = ["tabpfn*"] } }
+
+[tool.setuptools.package-data]
+tabpfn = ["architectures/base/*.pt"]
